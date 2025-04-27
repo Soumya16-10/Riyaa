@@ -1,3 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body, .container {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px;
+}
+
+h1, h2, p {
+  font-size: clamp(16px, 4vw, 36px); /* Scales text size responsively */
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*new changes  */
+
 body {
   font-family: Arial, Helvetica, sans-serif; margin:0;
   background-color: #ceb3f5;
