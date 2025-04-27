@@ -1,4 +1,7 @@
-/* Prevent overflow and ensure everything stays within bounds */
+
+  
+  
+  /* Reset some default styles */
 * {
   box-sizing: border-box;
 }
@@ -6,46 +9,76 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  font-size: 16px; /* Set font size to fixed size */
+  font-family: Arial, sans-serif;
+  background-color: #fff;
 }
 
-/* Force layout to match PC look */
+/* Container to hold everything with responsive padding */
 .container {
-  width: 100vw; /* Full viewport width */
-  max-width: 100%; /* Prevent container from getting larger */
-  padding: 20px;
+  width: 100%;
+  max-width: 1200px; /* Maximum width on large screens */
   margin: 0 auto;
+  padding: 20px;
 }
 
-/* Fix fonts to match PC size */
-h1, h2, p {
-  font-size: 24px; /* Set fixed size for text */
-  line-height: 1.5;
-  margin: 0;
-}
-
+/* Prevent overflow and handle images */
 img {
-  max-width: 100%;
+  max-width: 100%; /* Make images responsive */
   height: auto;
   display: block;
   margin: 10px 0;
 }
 
-/* Disable mobile scaling */
+/* Scalable font size for headings and paragraphs */
+h1, h2, p {
+  font-size: clamp(18px, 5vw, 36px); /* Font scales between 18px and 36px */
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Flexbox layout for mobile-friendly design */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Media query for screens smaller than 768px (tablets and phones) */
 @media (max-width: 768px) {
   body {
-    font-size: 16px; /* Keep font size fixed */
+    font-size: 14px; /* Slightly reduce font size on small screens */
   }
 
-  h1, h2 {
-    font-size: 24px; /* Ensure headings look the same on mobile */
+  h1 {
+    font-size: clamp(20px, 6vw, 32px); /* Slightly smaller heading for mobile */
+  }
+
+  h2 {
+    font-size: clamp(18px, 5vw, 28px); /* Smaller subheading on mobile */
   }
 
   .container {
-    padding: 20px;
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  /* Adjust spacing for images */
+  img {
+    margin: 10px 0;
   }
 }
+
+/* For very small screens like mobile phones in portrait mode */
+@media (max-width: 480px) {
+  h1 {
+    font-size: clamp(18px, 8vw, 28px); /* Larger adjustment for very small screens */
+  }
+
+  h2 {
+    font-size: clamp(16px, 7vw, 24px);
+  }
+}
+
 
 
 
