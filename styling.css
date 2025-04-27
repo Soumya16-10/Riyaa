@@ -1,10 +1,7 @@
-* {
-  box-sizing: border-box;
-}
 
 
 
-h1, h2, p {
+ p {
   overflow-wrap: break-word; /* Prevents text overflow */
   line-height: 1.5;
   margin: 0;
@@ -16,10 +13,8 @@ img {
   display: block;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 15px;
-  }
+@media (max-width: 768px) 
+  
 
   h1, h2 {
     font-size: clamp(20px, 6vw, 32px); /* Slightly smaller heading for mobile */
