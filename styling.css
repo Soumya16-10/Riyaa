@@ -1,31 +1,3 @@
-/* For very small screens like mobile phones in portrait mode */
-@media (max-width: 480px) {
-  body {
-    font-size: clamp(18px, 8vw, 28px); /* Larger adjustment for very small screens */
-  }
-
-  h2 {
-    font-size: clamp(16px, 7vw, 24px);
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*new changes  */
 
 body {
