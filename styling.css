@@ -1,6 +1,6 @@
 /* For very small screens like mobile phones in portrait mode */
 @media (max-width: 480px) {
-  h1 {
+  body {
     font-size: clamp(18px, 8vw, 28px); /* Larger adjustment for very small screens */
   }
 
