@@ -1,4 +1,19 @@
 
+/* Styles for mobile devices */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Styles for very small screens */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+
 
 /*  new changes*/
 
