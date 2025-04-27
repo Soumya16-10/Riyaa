@@ -17,7 +17,6 @@ body {
 }
 
 h1, h2, p {
-  font-size: clamp(16px, 5vw, 36px); /* Fluid font size that scales between 16px and 36px */
   overflow-wrap: break-word; /* Prevents text overflow */
   line-height: 1.5;
   margin: 0;
