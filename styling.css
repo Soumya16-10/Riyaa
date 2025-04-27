@@ -7,19 +7,10 @@
   margin: 0;
 }
 
-img {
-  max-width: 100%; /* Prevents images from overflowing */
-  height: auto; /* Maintains aspect ratio */
-  display: block;
-}
 
-@media (max-width: 768px) 
   
 
-  h1, h2 {
-    font-size: clamp(20px, 6vw, 32px); /* Slightly smaller heading for mobile */
-  }
-}
+  
 
 
 
