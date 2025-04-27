@@ -8,10 +8,7 @@ body, .container {
   padding: 20px;
 }
 
-h1, h2,  {
-  font-size: clamp(16px, 4vw, 36px); /* Scales text size responsively */
-  margin: 0;
-}
+
 
 img {
   max-width: 100%;
