@@ -2,19 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  min-width: 320px; /* Prevents the container from becoming too narrow */
-  max-width: 100%; /* Prevents overflow */
-  padding: 20px;
-}
 
 h1, h2, p {
   overflow-wrap: break-word; /* Prevents text overflow */
