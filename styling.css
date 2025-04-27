@@ -2,30 +2,55 @@
   box-sizing: border-box;
 }
 
-body, .container {
-  width: 100%;
-  overflow: hidden;
-  padding: 20px;
-}
-
-
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 10px 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  min-width: 320px; /* Prevents the container from becoming too narrow */
+  max-width: 100%; /* Prevents overflow */
+  padding: 20px;
+}
+
+h1, h2, p {
+  font-size: clamp(16px, 5vw, 36px); /* Fluid font size that scales between 16px and 36px */
+  overflow-wrap: break-word; /* Prevents text overflow */
+  line-height: 1.5;
+  margin: 0;
+}
+
+img {
+  max-width: 100%; /* Prevents images from overflowing */
+  height: auto; /* Maintains aspect ratio */
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1, h2 {
+    font-size: clamp(20px, 6vw, 32px); /* Slightly smaller heading for mobile */
+  }
 }
 
 
 
-/*new changes  */
+
+
+
+
+
+
+
+
+
+/*  new changes*/
 
 body {
   font-family: Arial, Helvetica, sans-serif; margin:0;
