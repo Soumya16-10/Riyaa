@@ -1,15 +1,27 @@
+/* Prevent overflow and ensure everything stays within bounds */
 * {
   box-sizing: border-box;
 }
 
-body, .container {
-  width: 100%;
-  overflow: hidden;
-  padding: 20px;
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-size: 16px; /* Set font size to fixed size */
 }
 
+/* Force layout to match PC look */
+.container {
+  width: 100vw; /* Full viewport width */
+  max-width: 100%; /* Prevent container from getting larger */
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Fix fonts to match PC size */
 h1, h2, p {
-  font-size: clamp(16px, 4vw, 36px); /* Scales text size responsively */
+  font-size: 24px; /* Set fixed size for text */
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -20,10 +32,19 @@ img {
   margin: 10px 0;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* Disable mobile scaling */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Keep font size fixed */
+  }
+
+  h1, h2 {
+    font-size: 24px; /* Ensure headings look the same on mobile */
+  }
+
+  .container {
+    padding: 20px;
+  }
 }
 
 
